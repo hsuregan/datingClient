@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="m87-c1-ZkU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Start View Controller-->
+        <scene sceneID="nrj-JR-Lqj">
+            <objects>
+                <viewController id="m87-c1-ZkU" customClass="startViewController" customModule="datingClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQC-Rq-pad"/>
+                        <viewControllerLayoutGuide type="bottom" id="bKD-Dm-9Lh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yba-4p-vTk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="show" identifier="goToLogin" id="0u2-oM-9aJ"/>
+                        <segue destination="GtJ-Jb-B54" kind="show" identifier="goToAccount" id="nZu-N6-3Ty"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vND-uh-aaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="193" y="-672"/>
+        </scene>
         <!--Login-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -32,17 +56,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pmt-9c-qz0">
-                                        <rect key="frame" x="156" y="225" width="63" height="30"/>
-                                        <animations/>
-                                        <state key="normal" title="LOGOUT">
-                                            <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="logout" destination="vXZ-lx-hvc" eventType="touchUpInside" id="njq-5j-Uh2"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-rT-2gi">
                                         <rect key="frame" x="156" y="187" width="47" height="30"/>
                                         <animations/>
@@ -52,7 +65,6 @@
                                         </state>
                                         <connections>
                                             <action selector="login" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jBr-P0-C1u"/>
-                                            <segue destination="GtJ-Jb-B54" kind="show" identifier="openProfile" id="tUd-W7-txg"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -73,11 +85,12 @@
                     <connections>
                         <outlet property="loginPassword" destination="rsW-ZC-p84" id="Ojo-vz-5pw"/>
                         <outlet property="loginUsername" destination="vNG-UT-2kn" id="AEj-Ya-AsL"/>
+                        <segue destination="GtJ-Jb-B54" kind="show" identifier="openProfile" id="LLz-e0-0pe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-121.5" y="151.5"/>
+            <point key="canvasLocation" x="-343.5" y="215.5"/>
         </scene>
         <!--Account-->
         <scene sceneID="qMJ-NT-fGE">
@@ -92,12 +105,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJv-7g-2Ez">
-                                <rect key="frame" x="166" y="87" width="42" height="21"/>
+                                <rect key="frame" x="136" y="86" width="122" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-dQ-PHc">
+                                <rect key="frame" x="136" y="181" width="63" height="30"/>
+                                <animations/>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xqj-f5-anI"/>
+                                    <action selector="logout" destination="GtJ-Jb-B54" eventType="touchUpInside" id="ZV3-2c-8Yd"/>
+                                    <segue destination="vXZ-lx-hvc" kind="show" identifier="LogOut" id="vNa-jw-agh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.91141280594405594" alpha="1" colorSpace="calibratedRGB"/>
@@ -108,8 +134,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pZ-Mj-K2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506.5" y="151.5"/>
+            <point key="canvasLocation" x="95.5" y="206.5"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vNa-jw-agh"/>
+        <segue reference="LLz-e0-0pe"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.7119180933" blue="0.40369665859999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>

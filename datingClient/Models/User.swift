@@ -12,14 +12,15 @@ class User {
     
     var username:String!
     
-    init(username:String) {
+    init(username:String, token: String) {
         self.username = username
+        self.token = token
     }
     //if token is expired, logout
     //if token is not expired, stay logged in
     //everytime viewDidLoad check
-    //var token:String!
+    var token:String!
     
     //people you match with
-   // var matches = [String:User]()
+    //var matches = [String:User]()
 }
