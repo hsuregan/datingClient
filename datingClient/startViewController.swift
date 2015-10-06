@@ -21,6 +21,7 @@ class startViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         var token = defaults.objectForKey("token") //as? String
         //println("yay");

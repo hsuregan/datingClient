@@ -27,7 +27,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vND-uh-aaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="193" y="-672"/>
+            <point key="canvasLocation" x="21" y="-712"/>
         </scene>
         <!--Login-->
         <scene sceneID="ufC-wZ-h7g">
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-343.5" y="215.5"/>
+            <point key="canvasLocation" x="-505.5" y="49.5"/>
         </scene>
         <!--Account-->
         <scene sceneID="qMJ-NT-fGE">
@@ -101,7 +101,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HMT-VK-AWa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="oVw-d4-3f9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJv-7g-2Ez">
@@ -134,12 +134,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pZ-Mj-K2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95.5" y="206.5"/>
+            <point key="canvasLocation" x="507" y="130"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vNa-jw-agh"/>
-        <segue reference="LLz-e0-0pe"/>
+        <segue reference="nZu-N6-3Ty"/>
+        <segue reference="0u2-oM-9aJ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.7119180933" blue="0.40369665859999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>
