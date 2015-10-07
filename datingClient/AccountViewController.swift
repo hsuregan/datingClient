@@ -11,13 +11,30 @@ import UIKit
 class AccountViewController: UIViewController {
     
     @IBOutlet var username: UILabel!
+    @IBOutlet var Token: UILabel!
+    
+    
+    
+    
     var user:User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        print("ACCOUNT VIEW LOADED, USER: ")
+        print(defaults.valueForKey("user"))
+        //SAVE USER INTO CORE DATA
+        //self.user = defaults.valueForKey("user") as! User
+        //self.username.text = self.user["username"]
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         //println(self.user.username)
-        self.username.text = self.user.username //as? String;
+        //self.username.text = self.user.username //as? String;
+        //let defaults = NSUserDefaults.standardUserDefaults()
+        //self.Token.text = defaults.dataForKey("token") as! String
+//        self.Token.text = defaults.get
       
     }
     
@@ -39,6 +56,8 @@ class AccountViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setObject(nil, forKey: "token")
+        defaults.setObject(nil, forKey: "user")
+
         //defaults.getObject(for
         defaults.synchronize()
         
@@ -48,9 +67,9 @@ class AccountViewController: UIViewController {
             
             //what is needed for success to execute?
             success: { (AFHTTPRequestOperation, AnyObject) -> Void in
-                println("successful logout")
+                print("successful logout")
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
+                print("fail")
         }
         
     }

@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var loginUsername: UITextField!
     @IBOutlet var loginPassword: UITextField!
-    var user:User! //login
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +27,7 @@ class ViewController: UIViewController {
     @IBAction func login() {
         //println(loginUsername.text)
         let manager = AFHTTPRequestOperationManager()
-        
+        print("LOGIN func")
         var params = [
             
             "username":"hsuregan5",
@@ -41,25 +40,30 @@ class ViewController: UIViewController {
             
             //what is needed for success to execute?
             success: { (AFHTTPRequestOperation, userObject) -> Void in
-                println(userObject)
+                print(userObject)
                 if let results = userObject as? NSDictionary {
-                    if let user_details = results["user"] as? NSDictionary {
-                        if let username = user_details["username"] as? String {
-                            self.user = User(username: username, token: "helloworld")
-                            let defaults = NSUserDefaults.standardUserDefaults()
-                            defaults.setObject(self.user.token, forKey: "token")
-                            //defaults.getObject(for
-                            defaults.synchronize()
-                            self.performSegueWithIdentifier("openProfile", sender: self)
+                    if let token = results["token"] as? String {
+                        if let user_details = results["user"] as? NSDictionary {
+                            if let username = user_details["username"] as? String {
+                                
+                                let defaults = NSUserDefaults.standardUserDefaults()
+                                let user_to_store = User(username: username, token: token)
+                                
+                                defaults.setObject(user_to_store, forKey: "user")
+                                defaults.setObject(token, forKey: "token")
+                                defaults.synchronize()
 
+                                print(defaults.valueForKey("token") as! String)
+                                print("SUCCESSFULLY STORED USER INFO")
+
+                                self.performSegueWithIdentifier("openProfile", sender: self)
+                            }
                         }
-                        
                     }
                 }
             }) { (AFHTTPRequestOperation, NSError) -> Void in
-                println("fail")
-                
-                
+                print("fail")
+            
 
         }
 
@@ -72,12 +76,15 @@ class ViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "openProfile") {
             
-            //self.user = User(username: "hsuregan5")
-            let newViewController = segue.destinationViewController as! AccountViewController
+            //store the user into the iphone
+
             
-            println("YAY::")
-            println(self.user.username)
-            newViewController.user = self.user
+            //self.user = User(username: "hsuregan5")
+            //let newViewController = segue.destinationViewController as! AccountViewController
+
+            
+            //print(self.user.username)
+            //newViewController.user = self.user
             
         }
     }

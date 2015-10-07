@@ -25,19 +25,21 @@ class startViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         var token = defaults.objectForKey("token") //as? String
         //println("yay");
-        println(token)
+        print("token: ")
+        print(token)
+        //token = "blah"
         
-        if(token == nil) {
+        if((token == nil)) {
             //go to the login screen
-            //println(token)
+            print("token is nil")
             self.performSegueWithIdentifier("goToLogin", sender: self)
             
         } else {
             //go to the accountview
             //token = token as! String
-            println(token)
+            print("token is not nil: ")
+            print(token)
             self.performSegueWithIdentifier("goToAccount", sender: self)
-            
         }
         // call something to the server
     }
