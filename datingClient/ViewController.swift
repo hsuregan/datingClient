@@ -46,10 +46,16 @@ class ViewController: UIViewController {
                         if let user_details = results["user"] as? NSDictionary {
                             if let username = user_details["username"] as? String {
                                 
-                                let defaults = NSUserDefaults.standardUserDefaults()
                                 let user_to_store = User(username: username, token: token)
+                               
+                                print("token: " + user_to_store.token)
+                                print("username: " + user_to_store.username)
                                 
-                                defaults.setObject(user_to_store, forKey: "user")
+                                
+                                let defaults = NSUserDefaults.standardUserDefaults()
+                               
+                                defaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(user_to_store), forKey: "user")
+                                
                                 defaults.setObject(token, forKey: "token")
                                 defaults.synchronize()
 
@@ -71,6 +77,7 @@ class ViewController: UIViewController {
     }
     
 
+    
     
     //if login fails how do I redirect back?
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

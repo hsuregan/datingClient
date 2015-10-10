@@ -25,8 +25,13 @@ class startViewController: UIViewController {
         let defaults = NSUserDefaults.standardUserDefaults()
         var token = defaults.objectForKey("token") //as? String
         //println("yay");
+        print("startview controller start")
         print("token: ")
         print(token)
+        
+        
+        ////LOGIN WITH TOKEN
+        
         //token = "blah"
         
         if((token == nil)) {

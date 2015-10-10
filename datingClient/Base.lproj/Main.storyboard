@@ -45,21 +45,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-Oq-Afi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-UT-2kn">
-                                        <rect key="frame" x="39" y="72" width="271" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-ZC-p84">
+                                        <rect key="frame" x="39" y="124" width="297" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-ZC-p84">
-                                        <rect key="frame" x="39" y="124" width="271" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-rT-2gi">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-rT-2gi">
                                         <rect key="frame" x="156" y="187" width="47" height="30"/>
                                         <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="47" id="ilT-AS-CCq"/>
+                                        </constraints>
                                         <state key="normal" title="LOGIN">
                                             <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -68,9 +65,25 @@
                                             <action selector="login" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jBr-P0-C1u"/>
                                         </connections>
                                     </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-UT-2kn">
+                                        <rect key="frame" x="39" y="44" width="297" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vNG-UT-2kn" firstAttribute="centerX" secondItem="a70-Oq-Afi" secondAttribute="centerX" id="48s-EF-JZi"/>
+                                    <constraint firstItem="rsW-ZC-p84" firstAttribute="top" secondItem="vNG-UT-2kn" secondAttribute="bottom" constant="50" id="GfN-Fx-D3O"/>
+                                    <constraint firstItem="rsW-ZC-p84" firstAttribute="centerX" secondItem="a70-Oq-Afi" secondAttribute="centerX" id="QLe-4G-Xdj"/>
+                                    <constraint firstItem="Fdd-rT-2gi" firstAttribute="leading" secondItem="a70-Oq-Afi" secondAttribute="leading" constant="156" id="bEJ-Cg-qnT"/>
+                                    <constraint firstItem="rsW-ZC-p84" firstAttribute="leading" secondItem="a70-Oq-Afi" secondAttribute="leading" constant="39" id="n5B-cE-u4h"/>
+                                    <constraint firstItem="Fdd-rT-2gi" firstAttribute="top" secondItem="rsW-ZC-p84" secondAttribute="bottom" constant="33" id="qf1-1P-dsM"/>
+                                    <constraint firstItem="rsW-ZC-p84" firstAttribute="leading" secondItem="vNG-UT-2kn" secondAttribute="leading" id="wIJ-7n-GgZ"/>
+                                    <constraint firstItem="rsW-ZC-p84" firstAttribute="top" secondItem="a70-Oq-Afi" secondAttribute="top" constant="124" id="xea-Pn-yEI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <animations/>

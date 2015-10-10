@@ -12,10 +12,7 @@ class AccountViewController: UIViewController {
     
     @IBOutlet var username: UILabel!
     @IBOutlet var Token: UILabel!
-    
-    
-    
-    
+
     var user:User!
     
     override func viewDidLoad() {
@@ -23,7 +20,22 @@ class AccountViewController: UIViewController {
         
         let defaults = NSUserDefaults.standardUserDefaults()
         print("ACCOUNT VIEW LOADED, USER: ")
-        print(defaults.valueForKey("user"))
+        
+        if let data = defaults.objectForKey("user") as? NSData {
+
+            let unarc = NSKeyedUnarchiver(forReadingWithData: data)
+
+            self.Token.text = defaults.valueForKey("token") as! String
+
+            if let user = unarc.decodeObjectForKey("root") as? User {
+                self.user = user;
+                self.username.text = user.username
+            }
+        
+        }
+
+        
+        //print(user.username)
         //SAVE USER INTO CORE DATA
         //self.user = defaults.valueForKey("user") as! User
         //self.username.text = self.user["username"]
