@@ -16,6 +16,7 @@
 		738D03571BBF51F5009BCF89 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D03561BBF51F5009BCF89 /* User.swift */; };
 		738D03591BBF75E4009BCF89 /* startViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 738D03581BBF75E4009BCF89 /* startViewController.swift */; };
 		738D035C1BBF8375009BCF89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 738D035A1BBF8375009BCF89 /* Main.storyboard */; };
+		73F4458D1BCB8D6600111F00 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F4458C1BCB8D6600111F00 /* RegisterController.swift */; settings = {ASSET_TAGS = (); }; };
 		73FFE4651BBF4B32006681AF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FFE4641BBF4B32006681AF /* AccountViewController.swift */; };
 		EA27B46C5503951FBD71DEB4 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CCFF7BAEF7F8C2B1361760 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		738D03561BBF51F5009BCF89 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
 		738D03581BBF75E4009BCF89 /* startViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = startViewController.swift; sourceTree = "<group>"; };
 		738D035B1BBF8375009BCF89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73F4458C1BCB8D6600111F00 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		73FFE4641BBF4B32006681AF /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7CB2E852D73C0CC08439A34A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F11E3895A18696A1BAD9D1CD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				738D03561BBF51F5009BCF89 /* User.swift */,
 				738D03581BBF75E4009BCF89 /* startViewController.swift */,
 				734593091BB912DC00ABFD30 /* ViewController.swift */,
+				73F4458C1BCB8D6600111F00 /* RegisterController.swift */,
 				738D035A1BBF8375009BCF89 /* Main.storyboard */,
 				73FFE4641BBF4B32006681AF /* AccountViewController.swift */,
 				7345930E1BB912DC00ABFD30 /* Images.xcassets */,
@@ -305,6 +308,7 @@
 			files = (
 				738D03571BBF51F5009BCF89 /* User.swift in Sources */,
 				738D03591BBF75E4009BCF89 /* startViewController.swift in Sources */,
+				73F4458D1BCB8D6600111F00 /* RegisterController.swift in Sources */,
 				7345930A1BB912DC00ABFD30 /* ViewController.swift in Sources */,
 				734593081BB912DC00ABFD30 /* AppDelegate.swift in Sources */,
 				73FFE4651BBF4B32006681AF /* AccountViewController.swift in Sources */,

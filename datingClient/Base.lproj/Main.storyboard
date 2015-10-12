@@ -6,6 +6,60 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Register Controller-->
+        <scene sceneID="XSa-Rp-sIK">
+            <objects>
+                <viewController id="0d6-LP-rIV" customClass="RegisterController" customModule="datingClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KKD-DG-Xrg"/>
+                        <viewControllerLayoutGuide type="bottom" id="qg9-Gf-7Ss"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Goq-s6-KvH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="rerehsu" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZU5-bf-XL4">
+                                <rect key="frame" x="59" y="67" width="262" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Retype Pwd" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ov3-Sn-Emc">
+                                <rect key="frame" x="59" y="167" width="262" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZe-PJ-XhK">
+                                <rect key="frame" x="154" y="249" width="57" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="register" destination="0d6-LP-rIV" eventType="touchUpInside" id="B8O-Jt-riv"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZ0-9A-AVC">
+                                <rect key="frame" x="59" y="122" width="262" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.90580944549999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Username" destination="ZU5-bf-XL4" id="vXD-AR-mat"/>
+                        <outlet property="password" destination="ZZ0-9A-AVC" id="yyW-DV-Nln"/>
+                        <outlet property="password2" destination="ov3-Sn-Emc" id="QNo-jv-eG1"/>
+                        <outlet property="username" destination="ZU5-bf-XL4" id="kwN-E9-xaO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PsV-n8-6vc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-455.5" y="-785.5"/>
+        </scene>
         <!--Start View Controller-->
         <scene sceneID="nrj-JR-Lqj">
             <objects>
@@ -45,12 +99,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a70-Oq-Afi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-ZC-p84">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ugh5" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rsW-ZC-p84">
                                         <rect key="frame" x="39" y="124" width="297" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hsuregan" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-UT-2kn">
+                                        <rect key="frame" x="39" y="44" width="297" height="30"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHg-GR-kBi">
+                                        <rect key="frame" x="151" y="234" width="57" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Register"/>
+                                        <connections>
+                                            <segue destination="0d6-LP-rIV" kind="show" id="XMd-QT-g18"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdd-rT-2gi">
                                         <rect key="frame" x="156" y="187" width="47" height="30"/>
                                         <animations/>
@@ -65,12 +133,6 @@
                                             <action selector="login" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jBr-P0-C1u"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNG-UT-2kn">
-                                        <rect key="frame" x="39" y="44" width="297" height="30"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                 </subviews>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,8 +223,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="0u2-oM-9aJ"/>
         <segue reference="LLz-e0-0pe"/>
-        <segue reference="vNa-jw-agh"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="1" green="0.7119180933" blue="0.40369665859999998" alpha="1" colorSpace="calibratedRGB"/>
 </document>

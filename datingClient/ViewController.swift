@@ -34,7 +34,11 @@ class ViewController: UIViewController {
             "password":"ugh"
             
         ]
-        
+//        params = [
+//            "username": loginUsername.text as? String,
+//            "password": loginPassword.text as? String
+//        ]
+//        
         manager.POST("http://localhost:3000/login1",
             parameters: params,
             
@@ -76,6 +80,16 @@ class ViewController: UIViewController {
         
     }
     
+//    @IBAction func register() {
+//        let manager = AFHTTPRequestOperationManager()
+//        print("LOGIN func")
+//        var params = [
+//            
+//            "username":"\()",
+//            "password":"ugh"
+//            
+//        ]
+//    }
 
     
     
