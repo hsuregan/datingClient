@@ -36,8 +36,11 @@ class RegisterController: UIViewController {
         
         var params = [
             
-            "username":"rerehsu6",
-            "password":"password"
+            "username":"rerehsu14",
+            "password":"password",
+           //for some reason got to store this
+            "active": "",
+            "token": ""
             
         ]
         
@@ -52,6 +55,52 @@ class RegisterController: UIViewController {
                 
                 print(userObject)
                 print("successful registration!")
+              
+                
+                manager.POST("http://localhost:3000/login1",
+                    parameters: params,
+                    
+                    //what is needed for success to execute?
+                    success: { (AFHTTPRequestOperation, userObject) -> Void in
+                        print(userObject)
+                        if let results = userObject as? NSDictionary {
+                            if let token = results["token"] as? String {
+                                if let user_details = results["user"] as? NSDictionary {
+                                    if let username = user_details["username"] as? String {
+                                        
+                                        let user_to_store = User(username: username, token: token)
+                                        
+                                        print("token: " + user_to_store.token)
+                                        print("username: " + user_to_store.username)
+                                        
+                                        
+                                        let defaults = NSUserDefaults.standardUserDefaults()
+                                        
+                                        defaults.setObject(NSKeyedArchiver.archivedDataWithRootObject(user_to_store), forKey: "user")
+                                        
+                                        defaults.setObject(token, forKey: "token")
+                                        defaults.synchronize()
+                                        
+                                        print(defaults.valueForKey("token") as! String)
+                                        print("SUCCESSFULLY STORED USER INFO")
+                                        
+                                        self.performSegueWithIdentifier("openProfilefromRegister", sender: self)
+                                    }
+                                }
+                            }
+                        }
+                    }) { (AFHTTPRequestOperation, NSError) -> Void in
+                        print("fail")
+                        
+                        
+                }
+                
+                
+                
+                
+                
+                
+                
                 
                 
                 

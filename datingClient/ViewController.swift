@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Socket_IO_Client_Swift
+
 
 class ViewController: UIViewController {
 
@@ -16,6 +18,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+
 
     }
 
@@ -30,9 +34,10 @@ class ViewController: UIViewController {
         print("LOGIN func")
         var params = [
             
-            "username":"hsuregan5",
-            "password":"ugh"
-            
+//            "username":"hsuregan5",
+//            "password":"ugh"
+            "username":"rerehsu14",
+            "password":"password"
         ]
 //        params = [
 //            "username": loginUsername.text as? String,
@@ -76,6 +81,8 @@ class ViewController: UIViewController {
             
 
         }
+
+
 
         
     }
